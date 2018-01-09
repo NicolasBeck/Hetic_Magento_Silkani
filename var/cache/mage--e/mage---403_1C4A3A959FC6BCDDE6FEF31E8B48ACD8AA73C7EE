@@ -1,9 +1,0 @@
-<div style="position:relative; border:1px dotted red; margin:6px 2px; padding:18px 2px 2px 2px; zoom:1;">
-<div style="position:absolute; left:0; top:0; padding:2px 5px; background:red; color:white; font:normal 11px Arial;
-text-align:left !important; z-index:998;" onmouseover="this.style.zIndex='999'"
-onmouseout="this.style.zIndex='998'" title="frontend/rwd/argentin/template/page/html/topmenu.phtml">frontend/rwd/argentin/template/page/html/topmenu.phtml</div>
-    <nav id="nav">
-        <ol class="nav-primary">
-            <li  class="level0 nav-1 first"><a href="http://127.0.0.1/index.php/sessun.html?___SID=U" class="level0 ">Sessùn</a></li><li  class="level0 nav-2"><a href="http://127.0.0.1/index.php/silkani.html?___SID=U" class="level0 ">Silkani</a></li><li  class="level0 nav-3 active last"><a href="http://127.0.0.1/index.php/whitness.html?___SID=U" class="level0 ">Whitness</a></li>        </ol>
-    </nav>
-</div>
