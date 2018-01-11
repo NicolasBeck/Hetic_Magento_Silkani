@@ -1,0 +1,173 @@
+/* ============================================ *
+ * Homepage
+ * ============================================ */
+
+$main-content-height: 100vh;
+
+*
+{
+    transition: all ease-in-out 0.2s;
+}
+
+header
+{
+    height: $side-border-size;
+    max-width: 100% !important;
+    background-color: $side-border-color;
+
+    .logo-wrapper
+    {
+        height: 100%;
+        padding: $side-border-padding 0;
+
+        img
+        {
+            display: block;
+            margin: 0 auto;
+            height: 100%;
+        }
+    }
+}
+
+
+.main-wrapper
+{
+    height: calc(#{$main-content-height} - #{$side-border-size} * 2);
+    position: relative;
+
+    > div
+    {
+        float: left;
+    }
+
+    .left-side-bar, .right-side-bar
+    {
+        position: relative;
+        background-color: $side-border-color;
+        height: 100%;
+        width: $side-border-size;
+        padding: $side-border-padding;
+
+        img
+        {
+            width: calc(100% - #{$side-border-padding} * 2);
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+    }
+
+    .main-content
+    {
+        width: calc(100% - #{$side-border-size} * 2);
+        height: 100%;
+        background-image: radial-gradient(circle at 52% 52%, #bdbbb6, #eaeaea);
+
+        .collections-wrapper
+        {
+            height: 100%;
+            overflow: hidden;
+
+            .collection
+            {
+                width: 50%;
+                height: 100%;
+                position: relative;
+
+                .collection-hover-detect
+                {
+                    width: 70%;
+                    height: 100%;
+                    position: absolute;
+                    cursor: url(../images/pointer.png) 50 50, pointer;
+                    z-inder: 5;
+
+                    &:hover
+                    {
+                        .collection-title
+                        {
+                            color: white;
+                        }
+
+                        .collection-product
+                        {
+                            opacity: 1;
+                        }
+                    }
+                }
+
+                &:first-child
+                {
+                    float: left;
+
+
+                    .collection-hover-detect
+                    {
+                        right: 0;
+
+                        .collection-title
+                        {
+                            text-align: right;
+                            right: 20%;
+                        }
+
+                        .collection-product
+                        {
+                            right: -10%;
+                        }
+                    }
+                }
+
+                &:not(:first-child)
+                {
+                    float: right;
+
+                    .collection-hover-detect
+                    {
+                        left: 0;
+
+                        .collection-title
+                        {
+                            text-align: left;
+                            left: 20%;
+                        }
+
+                        .collection-product
+                        {
+                            left: -10%;
+                        }
+                    }
+                } 
+
+                .collection-title
+                {
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    color: black;
+                    z-index: 3;
+                    line-height: 20px;
+
+                    .main
+                    {
+                        font-size: 50px;
+                        font-family: "Old Standard TT", serif;
+                    }
+
+                    .sub
+                    {
+                        font-size: 30px;
+                        font-weight: light;
+                    }
+                }
+
+                .collection-product
+                {
+                    position: absolute;
+                    opacity: 0.3;
+                } 
+            }
+        }
+    }
+}

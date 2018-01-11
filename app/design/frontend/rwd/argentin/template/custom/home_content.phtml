@@ -1,0 +1,25 @@
+<?php
+$homeCategories = $this->getHomeCategories();
+?>
+
+<div class="main-content">
+	<div class="collections-wrapper">
+		<?php if (is_array($homeCategories) && count($homeCategories)) { ?>
+			<?php foreach($homeCategories as $_category) { 
+  			?>
+				<div class="collection">
+					<div class="collection-hover-detect">
+						<div class="collection-title">
+							<span class="main"><?php echo $_category['name'] ?></span>
+							<span class="sub">Sessùn</span>
+						</div>
+
+						<div class="collection-product">
+							<img src="<?php echo Mage::getBaseUrl('media') . 'catalog/category/' . $_category['home_image'] ?>" />
+						</div>
+					</div>
+				</div>
+			<?php } ?>
+		<?php } ?>
+	</div>
+</div>

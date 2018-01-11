@@ -30,7 +30,14 @@
     <default>
         <reference name="header">
             <block type="page/template_links" name="account.links" as="accountLinks" template="persistent/header/links.phtml"/>
+
+            <block type="cms/block" name="home_content_logo">
+                <action method="setBlockId">
+                   <block_id>home_content_logo</block_id>
+                </action>
+            </block>
         </reference>
+
     </default>
 
     <customer_account_login>

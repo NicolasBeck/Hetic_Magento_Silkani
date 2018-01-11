@@ -1,0 +1,145 @@
+.menu
+{
+	display: none;
+	width: calc(100% - #{$side-border-size} * 2.5);
+	height: calc(100% - #{$side-border-size} * 0.5);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: white;
+	z-index: 100;
+
+	.menu-content-wrapper
+	{
+		width: 100%;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		padding: 0 25%;
+
+		.title
+		{
+			margin-bottom: 50px;
+
+			span
+			{
+				position: relative;
+				color: black;
+				font-size: 15px;
+				text-transform: uppercase;
+
+				&:first-child
+				{
+					padding-right: 10px;
+				}
+
+				&:last-child
+				{
+					padding-left: 10px;
+				}
+
+				&:not(:last-child)::after
+				{
+					content: "";
+	                display: block;
+	                position: absolute;
+	                right: 0;
+	                top: 50%;
+	                transform: translate(50%, -50%);
+	                width: 5px;
+	                height: 5px;
+	                background-color: black;
+				}
+			}
+		}
+
+		.image-wrapper
+		{
+			position: relative;
+			display: block;
+			margin: 0 auto 30px auto;
+			height: 320px;
+			width: 400px;
+			overflow: hidden;
+
+			img
+			{
+				height: 100%;
+				position: absolute;
+				left: 50%;
+				transform: translateX(-50%);
+			}
+		}
+
+		.onglets
+		{
+			display: inline-block;
+
+			li
+			{
+				position: relative;
+				float: left;
+				color: black;
+				font-size: 16px;
+
+				&:not(:first-child)
+				{
+					padding-left: 15px;
+				}
+
+				&:not(:last-child)
+				{
+					padding-right: 15px;
+				}
+
+				&:not(:last-child)::after
+				{
+					content: "";
+	                display: block;
+	                position: absolute;
+	                right: 0;
+	                top: 50%;
+	                transform: translate(50%, -50%);
+	                width: 5px;
+	                height: 5px;
+	                background-color: black;
+				}
+			}
+		}
+
+		.collections
+		{
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			line-height: 30px;
+
+			li
+			{
+				color: $light-grey;
+				font-family: "Old Standard TT", serif;
+				font-size: 35px;
+				display: inline-block;
+
+				&:hover
+				{
+					color: black;
+					cursor: pointer;
+				}
+
+				span
+				{
+					float: left;
+					display: block;
+				}
+
+				.sub
+				{
+					font-size: 20px;
+					text-transform: uppercase;
+				}
+			}
+		}
+	}
+}

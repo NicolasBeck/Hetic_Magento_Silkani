@@ -31,20 +31,21 @@ Default layout, loads most of the pages
 -->
 
     <default>
+
+        <reference name="head">
+            <action method="addItem"><type>skin_js</type><script>js/custom/menu.js</script></action>
+            <block type="core/text" name="google_font_old_standard">
+                <action method="setText"><text><![CDATA[<link href="https://fonts.googleapis.com/css?family=Old+Standard+TT" rel="stylesheet"> ]]></text></action>
+            </block>
+        </reference>
+
         <reference name="footer">
             <block type="cms/block" name="cms_footer_links" before="footer_links">
                 <!--
                     The content of this block is taken from the database by its block_id.
                     You can manage it in admin CMS -> Static Blocks
                 -->
-                <action method="setBlockId"><block_id>footer_links_company</block_id></action>
-            </block>
-            <block type="cms/block" name="cms_footer_links_sm" after="footer_links2">
-                <!--
-                    The content of this block is taken from the database by its block_id.
-                    You can manage it in admin CMS -> Static Blocks
-                -->
-                <action method="setBlockId"><block_id>footer_links_sm</block_id></action>
+                <action method="setBlockId"><block_id>footer_links</block_id></action>
             </block>
         </reference>
     </default>
@@ -64,17 +65,16 @@ Default layout, loads most of the pages
         <update handle="cms_menu"/>
         
         <reference name="content">
-            <block type="core/template" name="page_content_heading" template="cms/content_heading.phtml"/>
-            <block type="page/html_wrapper" name="cms.wrapper" translate="label">
-                <label>CMS Content Wrapper</label>
-                <action method="setElementClass"><value>std</value></action>
-                <block type="cms/page" name="cms_page"/>
-            </block>
+            
         </reference>
     </cms_page>
 
     <cms_index_index translate="label">
         <label>CMS Home Page</label>
+
+        <reference name="root">
+            <action method="setTemplate"><template>page/home.phtml</template></action>
+        </reference>
     </cms_index_index>
 
     <cms_index_defaultindex>

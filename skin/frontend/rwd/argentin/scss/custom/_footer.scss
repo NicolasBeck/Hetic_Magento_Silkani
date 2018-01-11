@@ -1,0 +1,44 @@
+/* ============================================ *
+ * Footer
+ * ============================================ */
+
+footer
+{
+    height: $side-border-size;
+    padding: $side-border-padding;
+    width: 100%;
+    background-color: $side-border-color;
+    clear: both;
+    text-align: center;
+
+    .links
+    {
+        display: inline-block;
+
+        li
+        {
+            padding: 0 20px;
+            float: left;
+            position: relative;
+
+            &:not(:last-child)::after
+            {
+                content: "";
+                display: block;
+                position: absolute;
+                right: 0;
+                top: 50%;
+                transform: translate(50%, -50%);
+                width: 5px;
+                height: 5px;
+                background-color: black;
+            }
+
+            a
+            {
+                text-decoration: none;
+                color: black;
+            }
+        }
+    }
+}

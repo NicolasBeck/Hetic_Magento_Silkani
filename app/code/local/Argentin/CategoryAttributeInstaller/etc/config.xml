@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <Argentin_CategoryAttributeInstaller>
+      <version>0.0.1</version>
+    </Argentin_CategoryAttributeInstaller>
+  </modules>
+    <global>
+        <resources>
+            <CategoryAttributeInstaller_setup>
+                <setup>
+                    <module>Argentin_CategoryAttributeInstaller</module>
+                    <class>Mage_Catalog_Model_Resource_Setup</class>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </CategoryAttributeInstaller_setup>
+            <CategoryAttributeInstaller_setup_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </CategoryAttributeInstaller_setup_write>
+            <CategoryAttributeInstaller_setup_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </CategoryAttributeInstaller_setup_read>
+        </resources>
+    </global>
+</config>
