@@ -8,16 +8,16 @@ $homeCategories = $this->getHomeCategories();
 			<?php foreach($homeCategories as $_category) { 
   			?>
 				<div class="collection">
-					<div class="collection-hover-detect">
+					<a class="collection-hover-detect" href="<?php echo $_category['url'] ?>">
 						<div class="collection-title">
 							<span class="main"><?php echo $_category['name'] ?></span>
-							<span class="sub">Sessùn</span>
+							<span class="sub"><?php echo $_category['parent_category']->getName() ?></span>
 						</div>
 
 						<div class="collection-product">
 							<img src="<?php echo Mage::getBaseUrl('media') . 'catalog/category/' . $_category['home_image'] ?>" />
 						</div>
-					</div>
+					</a>
 				</div>
 			<?php } ?>
 		<?php } ?>

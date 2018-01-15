@@ -117,27 +117,36 @@
 
 			li
 			{
-				color: $light-grey;
-				font-family: "Old Standard TT", serif;
-				font-size: 35px;
-				display: inline-block;
+			
+					display: inline-block;
 
-				&:hover
+				a
 				{
-					color: black;
-					cursor: pointer;
-				}
+					color: $light-grey;
+					font-family: "Old Standard TT", serif;
+					font-size: 35px;
 
-				span
-				{
-					float: left;
-					display: block;
-				}
+					&:hover
+					{
+						color: black;
+						cursor: pointer;
+					}
 
-				.sub
-				{
-					font-size: 20px;
-					text-transform: uppercase;
+					span
+					{
+						float: left;
+						display: block;
+					}
+
+					.sub
+					{
+						font-size: 20px;
+						font-family: "gotham-light", sans-serif;
+						font-weight: 300;
+						text-transform: uppercase;
+						line-height: 40px;
+						padding-left: 10px;
+					}
 				}
 			}
 		}

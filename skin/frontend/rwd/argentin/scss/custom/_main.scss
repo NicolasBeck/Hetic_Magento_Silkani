@@ -4,6 +4,12 @@ $side-border-color: white;
 $side-border-padding: 15px;
 $light-grey: #eaeaea;
 
+@font-face
+{
+	font-family: "gotham-light";
+	src: url('../fonts/GOTHAM-LIGHT.TTF');
+}
+
 
 @import "footer";
 @import "home";

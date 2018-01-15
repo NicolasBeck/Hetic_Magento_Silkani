@@ -1,3 +1,5 @@
+jQuery.noConflict(true);
+
 document.addEventListener('DOMContentLoaded', function () {
 	var menu = document.querySelector('.menu-icon');
 

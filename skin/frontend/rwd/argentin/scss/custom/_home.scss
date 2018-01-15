@@ -19,12 +19,19 @@ header
     {
         height: 100%;
         padding: $side-border-padding 0;
+        text-align: center;
 
-        img
+        a
         {
-            display: block;
-            margin: 0 auto;
+            display: inline-block;
             height: 100%;
+
+            img
+            {
+                display: block;
+                margin: 0 auto;
+                height: 100%;
+            }
         }
     }
 }
@@ -81,10 +88,12 @@ header
                     height: 100%;
                     position: absolute;
                     cursor: url(../images/pointer.png) 50 50, pointer;
-                    z-inder: 5;
+                    z-index: 5;
 
                     &:hover
                     {
+                        z-index: 6;
+                        
                         .collection-title
                         {
                             color: white;
@@ -158,7 +167,9 @@ header
                     .sub
                     {
                         font-size: 30px;
-                        font-weight: light;
+                        font-weight: 300;
+                        font-family: "gotham-light", sans-serif;
+                        text-transform: uppercase;
                     }
                 }
 
