@@ -7,6 +7,7 @@ Ce projet nous a permis d'**apprendre de nouvelles technologies** et de **travai
 ## Fichiers à rendre
 
 Vous trouverez un dossier se nommant "***fichiers_a_rendre***" où vous trouverez **la présentation** ainsi que **les maquettes**.
+Il y a de plus, un dump de la base de données, se nommant "***magento.sql***", il créera une base de données au nom de "*magento*" ou remplacera celle existante.
 
 ## Configuration
 
